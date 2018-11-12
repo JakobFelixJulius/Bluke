@@ -99,13 +99,17 @@ class StatusMenuController: NSObject {
 		if activated {
 			for item in bluetoothDevices {
 				if item.isSelected {
-					item.device.openConnection()
+					DispatchQueue.main.async {
+						item.device.openConnection()
+					}
 				}
 			}
 		} else {
 			for item in bluetoothDevices {
 				if item.isSelected {
-					item.device.closeConnection()
+					DispatchQueue.main.async {
+						item.device.closeConnection()
+					}
 				}
 			}
 		}
