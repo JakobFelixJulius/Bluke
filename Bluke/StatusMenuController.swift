@@ -28,6 +28,13 @@ class StatusMenuController: NSObject {
 		NSApplication.shared.terminate(self)
 	}
 	
+	@IBAction func activateClicked(_ sender: NSMenuItem) {
+		activateHelper()
+		print("activate clicked")
+		sender.title = activated ? "Deactivate" : "Activate"
+	}
+	
+	
 	override func awakeFromNib() {
 		// create & display menubar icon
 //		let icon = NSImage(named: NSImage.Name(rawValue: "statusIcon"))
@@ -88,11 +95,15 @@ class StatusMenuController: NSObject {
 			statusItem.menu = nil
 			print("right click")
 		} else {
-			activated = !activated
-			statusItem.title = activated ? "☗" : "☖"
 			print("left click")
-			activateBluetoothDevices()
+			activateHelper()
 		}
+	}
+	
+	func activateHelper() {
+		activated = !activated
+		statusItem.title = activated ? "☗" : "☖"
+		activateBluetoothDevices()
 	}
 	
 	func activateBluetoothDevices() {

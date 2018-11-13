@@ -11,6 +11,9 @@
 		B2A2ACAC219977A10081A914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2A2ACAB219977A10081A914 /* Assets.xcassets */; };
 		B2A2ACAF219977A10081A914 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2A2ACAD219977A10081A914 /* MainMenu.xib */; };
 		B2A2ACB821997A800081A914 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A2ACB721997A800081A914 /* StatusMenuController.swift */; };
+		B2AC24F0219ACCC900D49C99 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2AC24EF219ACCC900D49C99 /* Preferences.storyboard */; };
+		B2AC24F2219AD1F200D49C99 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC24F1219AD1F200D49C99 /* PreferencesViewController.swift */; };
+		B2AC24F4219AD2D800D49C99 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC24F3219AD2D800D49C99 /* PreferencesWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		B2A2ACB0219977A10081A914 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2A2ACB1219977A10081A914 /* Bluke.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bluke.entitlements; sourceTree = "<group>"; };
 		B2A2ACB721997A800081A914 /* StatusMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
+		B2AC24EF219ACCC900D49C99 /* Preferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
+		B2AC24F1219AD1F200D49C99 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		B2AC24F3219AD2D800D49C99 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +61,31 @@
 			children = (
 				B2A2ACA9219977A10081A914 /* AppDelegate.swift */,
 				B2A2ACB721997A800081A914 /* StatusMenuController.swift */,
-				B2A2ACAB219977A10081A914 /* Assets.xcassets */,
 				B2A2ACAD219977A10081A914 /* MainMenu.xib */,
+				B2AC24F5219AD31300D49C99 /* Preferences */,
+				B2AC24F6219AD32E00D49C99 /* Supporting Files */,
+			);
+			path = Bluke;
+			sourceTree = "<group>";
+		};
+		B2AC24F5219AD31300D49C99 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				B2AC24F1219AD1F200D49C99 /* PreferencesViewController.swift */,
+				B2AC24F3219AD2D800D49C99 /* PreferencesWindowController.swift */,
+				B2AC24EF219ACCC900D49C99 /* Preferences.storyboard */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		B2AC24F6219AD32E00D49C99 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2A2ACAB219977A10081A914 /* Assets.xcassets */,
 				B2A2ACB0219977A10081A914 /* Info.plist */,
 				B2A2ACB1219977A10081A914 /* Bluke.entitlements */,
 			);
-			path = Bluke;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2AC24F0219ACCC900D49C99 /* Preferences.storyboard in Resources */,
 				B2A2ACAC219977A10081A914 /* Assets.xcassets in Resources */,
 				B2A2ACAF219977A10081A914 /* MainMenu.xib in Resources */,
 			);
@@ -136,6 +162,8 @@
 			files = (
 				B2A2ACB821997A800081A914 /* StatusMenuController.swift in Sources */,
 				B2A2ACAA219977A10081A914 /* AppDelegate.swift in Sources */,
+				B2AC24F4219AD2D800D49C99 /* PreferencesWindowController.swift in Sources */,
+				B2AC24F2219AD1F200D49C99 /* PreferencesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,11 +291,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Bluke/Bluke.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Bluke/Supporting Files/Bluke.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2HL3C78H53;
-				INFOPLIST_FILE = Bluke/Info.plist;
+				INFOPLIST_FILE = "Bluke/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jfjs.Bluke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -279,11 +307,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Bluke/Bluke.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Bluke/Supporting Files/Bluke.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2HL3C78H53;
-				INFOPLIST_FILE = Bluke/Info.plist;
+				INFOPLIST_FILE = "Bluke/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jfjs.Bluke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
