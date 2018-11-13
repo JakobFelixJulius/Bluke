@@ -8,6 +8,8 @@
 
 import Cocoa
 import IOBluetooth
+import HotKey
+import Carbon
 
 struct BluetoothDevice {
 	var name: String
@@ -22,7 +24,19 @@ class StatusMenuController: NSObject {
 	var activated: Bool! = false
 	var bluetoothDevices = [BluetoothDevice]()
 	let statusItem = NSStatusBar.system.statusItem(withLength: -1)
-	let popover = NSPopover()
+	
+	private var hotKey: HotKey? {
+		didSet {
+			guard let hotKey = hotKey else {
+				print("error")
+				return
+			}
+			
+			hotKey.keyDownHandler = { [weak self] in
+				self?.activateHelper()
+			}
+		}
+	}
 	
 	@IBAction func quitClicked(_ sender: NSMenuItem) {
 		NSApplication.shared.terminate(self)
@@ -51,6 +65,9 @@ class StatusMenuController: NSObject {
 		
 		// populate devices submenu
 		updateBluetoothDevices()
+		
+		// Setup hot key for ⌥⌘R
+		hotKey = HotKey(key: .r, modifiers: [.command, .option])
 	}
 	
 	func updateBluetoothDevices() {

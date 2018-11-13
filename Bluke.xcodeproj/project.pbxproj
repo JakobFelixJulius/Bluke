@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FE64C14F16DBED379B0C609 /* Pods_Bluke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365322D0B270DE4B147E29E1 /* Pods_Bluke.framework */; };
 		B2A2ACAA219977A10081A914 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A2ACA9219977A10081A914 /* AppDelegate.swift */; };
 		B2A2ACAC219977A10081A914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2A2ACAB219977A10081A914 /* Assets.xcassets */; };
 		B2A2ACAF219977A10081A914 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2A2ACAD219977A10081A914 /* MainMenu.xib */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		365322D0B270DE4B147E29E1 /* Pods_Bluke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bluke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BB329C1B140B90A85E30637 /* Pods-Bluke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluke.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bluke/Pods-Bluke.release.xcconfig"; sourceTree = "<group>"; };
 		B2A2ACA6219977A10081A914 /* Bluke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bluke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A2ACA9219977A10081A914 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2A2ACAB219977A10081A914 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -27,6 +30,7 @@
 		B2AC24EF219ACCC900D49C99 /* Preferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
 		B2AC24F1219AD1F200D49C99 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		B2AC24F3219AD2D800D49C99 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
+		CBB52602E029B3986542F500 /* Pods-Bluke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bluke/Pods-Bluke.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,17 +38,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE64C14F16DBED379B0C609 /* Pods_Bluke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BE0D96FF5489423DCC76062 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CBB52602E029B3986542F500 /* Pods-Bluke.debug.xcconfig */,
+				6BB329C1B140B90A85E30637 /* Pods-Bluke.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		79F1811A74E6CA93F821C244 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				365322D0B270DE4B147E29E1 /* Pods_Bluke.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B2A2AC9D219977A10081A914 = {
 			isa = PBXGroup;
 			children = (
 				B2A2ACA8219977A10081A914 /* Bluke */,
 				B2A2ACA7219977A10081A914 /* Products */,
+				4BE0D96FF5489423DCC76062 /* Pods */,
+				79F1811A74E6CA93F821C244 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,9 +119,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2A2ACB4219977A10081A914 /* Build configuration list for PBXNativeTarget "Bluke" */;
 			buildPhases = (
+				929E01E1023CECBE1710F411 /* [CP] Check Pods Manifest.lock */,
 				B2A2ACA2219977A10081A914 /* Sources */,
 				B2A2ACA3219977A10081A914 /* Frameworks */,
 				B2A2ACA4219977A10081A914 /* Resources */,
+				8BBE647E5D4A1C3513FD8F21 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +180,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8BBE647E5D4A1C3513FD8F21 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Bluke/Pods-Bluke-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HotKey/HotKey.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HotKey.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bluke/Pods-Bluke-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		929E01E1023CECBE1710F411 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bluke-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B2A2ACA2219977A10081A914 /* Sources */ = {
@@ -289,6 +362,7 @@
 		};
 		B2A2ACB5219977A10081A914 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBB52602E029B3986542F500 /* Pods-Bluke.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Bluke/Supporting Files/Bluke.entitlements";
@@ -305,6 +379,7 @@
 		};
 		B2A2ACB6219977A10081A914 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BB329C1B140B90A85E30637 /* Pods-Bluke.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Bluke/Supporting Files/Bluke.entitlements";

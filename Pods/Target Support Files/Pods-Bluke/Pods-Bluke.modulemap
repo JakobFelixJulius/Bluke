@@ -1,0 +1,6 @@
+framework module Pods_Bluke {
+  umbrella header "Pods-Bluke-umbrella.h"
+
+  export *
+  module * { export * }
+}
